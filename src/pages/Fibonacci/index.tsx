@@ -49,9 +49,7 @@ const Fibonacci: React.FC = () => {
       ...sequence,
       {
         fibonacci: last.fibonacci + secondLast.fibonacci || 1,
-        shape: ["triangle", "square", "circle"][
-          Math.floor(Math.random() * 3)
-        ] as IShape,
+        shape: ["square", "triangle", "circle"][sequence.length % 3] as IShape,
       },
     ];
   };
